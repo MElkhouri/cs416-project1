@@ -16,7 +16,7 @@ static unsigned int myaddress = 4026544704;   // Binary  would be 11110000000000
 static unsigned int get_top_bits(unsigned int value,  int num_bits)
 {
 	//Implement your code here
-	
+    return value>>(32-num_bits);
 }
 
 
@@ -27,7 +27,8 @@ static unsigned int get_top_bits(unsigned int value,  int num_bits)
 static void set_bit_at_index(char *bitmap, int index)
 {
     //Implement your code here	
-
+    int element = index /8;
+    bitmap[element] |= (1 << (index%8));
     return;
 }
 
@@ -40,7 +41,9 @@ static int get_bit_at_index(char *bitmap, int index)
 {
     //Get to the location in the character bitmap array
     //Implement your code here
-    
+    int element = index /8;
+    int bit = bitmap[element] & (1 << (index%8));
+    return bit >> (index%8);
 }
 
 
@@ -70,6 +73,7 @@ int main () {
      */
     printf("Function 3: The value at %dth location %d\n", 
             GET_BIT_INDEX, get_bit_at_index(bitmap, GET_BIT_INDEX));
-            
+
+    free(bitmap);  
     return 0;
 }
