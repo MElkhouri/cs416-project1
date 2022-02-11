@@ -22,6 +22,7 @@ void *inc_shared_counter(void *arg) {
 
 
         /* Implement Code Here */
+        x++;
 
 
 
@@ -51,6 +52,19 @@ int main(int argc, char *argv[]) {
 
 
     /* Implement Code Here */
+   
+   
+    pthread_t tid[2];
+    for (int i = 0; i < 2; i++) {
+        pthread_create(&tid[i], NULL, inc_shared_counter, NULL);
+    }
+    for (int i = 0; i < 2; i++){
+       pthread_join(tid[i], NULL);
+    }
+       
+
+ 
+
 
 
 
