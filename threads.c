@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-pthread_t t1, t2;
+
 int x = 0;
 int loop = 10000;
 
