@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <pthread.h>
 
+//Michael Elkhouri, mre66, ilab machine: assembly.cs.rutgers.edu
+//Akash Pathuri, arp229, same machine
 
 int x = 0;
 int loop = 10000;
