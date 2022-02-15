@@ -9,7 +9,7 @@
  */
 
 //Michael Elkhouri, mre66, ilab machine: assembly.cs.rutgers.edu
-//Akash Pathuri, arp229, same machine
+//Akash Pathuri, arp229, same machine, compiled in 32 bit mode
 
 void segment_fault_handler(int signum) {
 
