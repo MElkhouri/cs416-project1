@@ -7,6 +7,9 @@
  * Your goal must be to change the stack frame of caller (main function)
  * such that you get to the line after "r2 = *( (int *) 0 )"
  */
+//Michael Elkhouri, mre66, assembly.cs.rutgers.edu
+//Akash Pathuri, arp229, ilab4.cs.rutgers.edu
+
 void segment_fault_handler(int signum) {
 
     printf("handling segmentation fault!\n");
