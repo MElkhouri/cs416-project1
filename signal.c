@@ -7,24 +7,19 @@
  * Your goal must be to change the stack frame of caller (main function)
  * such that you get to the line after "r2 = *( (int *) 0 )"
  */
-
-//Michael Elkhouri, mre66, ilab machine: assembly.cs.rutgers.edu
-//Akash Pathuri, arp229, same machine, compiled in 32 bit mode
-
 void segment_fault_handler(int signum) {
 
     printf("handling segmentation fault!\n");
     
     /* Step 2: Handle segfault and change the stack*/
-    int *pointer = &signum;
-
-    pointer += 0xf;
-    *pointer += 0x2;
+    int *PC = &signum + 0xf;
+    *PC += 0x2;
 
 }   
 
 int main(int argc, char *argv[]) {
 
+    
     int r2 = 0;
 
     /* Step 1: Registering signal handler */

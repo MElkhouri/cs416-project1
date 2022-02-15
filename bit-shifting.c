@@ -7,9 +7,6 @@
 #define SET_BIT_INDEX 17 //bit index to set 
 #define GET_BIT_INDEX 17 //bit index to read
 
-//Michael Elkhouri, mre66, ilab machine: assembly.cs.rutgers.edu
-//Akash Pathuri, arp229, same machine
-
 static unsigned int myaddress = 4026544704;   // Binary  would be 11110000000000000011001001000000
 
 

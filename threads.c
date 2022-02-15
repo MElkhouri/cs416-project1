@@ -21,13 +21,8 @@ void *inc_shared_counter(void *arg) {
     int i;
 
     for(i = 0; i < loop; i++){
-
-
         /* Implement Code Here */
         x++;
-
-
-
         printf("x is incremented to %d\n", x);
     }
 
@@ -53,9 +48,7 @@ int main(int argc, char *argv[]) {
     printf("Going to run two threads to increment x up to %d\n", 2 * loop);
 
 
-    /* Implement Code Here */
-   
-   
+    /* Implement Code Here */ 
     pthread_t tid[2];
     for (int i = 0; i < 2; i++) {
         pthread_create(&tid[i], NULL, inc_shared_counter, NULL);
@@ -63,12 +56,6 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < 2; i++){
        pthread_join(tid[i], NULL);
     }
-       
-
- 
-
-
-
 
     printf("The final value of x is %d\n", x);
 
