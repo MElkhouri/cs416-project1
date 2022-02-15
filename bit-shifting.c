@@ -8,7 +8,8 @@
 #define GET_BIT_INDEX 17 //bit index to read
 
 static unsigned int myaddress = 4026544704;   // Binary  would be 11110000000000000011001001000000
-
+//Michael Elkhouri, mre66, assembly.cs.rutgers.edu
+//Akash Pathuri, arp229, ilab4.cs.rutgers.edu
 
 /* 
  * Function 1: EXTRACTING OUTER (TOP-ORDER) BITS
